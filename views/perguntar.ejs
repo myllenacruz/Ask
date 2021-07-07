@@ -7,9 +7,9 @@
                 <h1>Pergunte algo:</h1>
             </div>
             <div class="card-body">
-                <form class="form form-group">
-                    <input type="text" placeholder="Título">
-                    <textarea class="form-control" placeholder="O que você quer perguntar?"></textarea>
+                <form class="form form-group" method="POST" action="/saveask">
+                    <input type="text" placeholder="Título" name="titulo">
+                    <textarea class="form-control" placeholder="O que você quer perguntar?" name="descricao"></textarea>
                     <button class="btn btn-outline-dark btn-sm col-xs-2 mt-3">Enviar</button>
                 </form>
             </div>
