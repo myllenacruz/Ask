@@ -17,6 +17,22 @@ h1 {
   padding-bottom: 30px;
 }
 
+h3 {
+  color: #484385;
+}
+
+h2 {
+  color: #3d3c4d;
+}
+
+a {
+  color: rgb(131, 129, 158) !important;
+}
+
+a:hover {
+  color: #9b95e7 !important;
+}
+
 .navbar-dark {
   background: #2a2935 !important;
 }

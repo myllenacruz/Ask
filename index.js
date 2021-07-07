@@ -18,8 +18,15 @@ app.use(express.static("public"));
 app.use (express.urlencoded ({ extended: true }));
 app.use (express.json());
 
+//Rotas
 app.get("/", (req, res) => {
-  res.render("index");
+  askModel.findAll({ raw: true, order:[
+    ['id', 'DESC']
+  ] }).then(perguntas => {
+    res.render("index", {
+      perguntas: perguntas
+    });
+  });
 });
 
 app.get("/perguntar", (req, res) => {
