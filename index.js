@@ -27,9 +27,16 @@ app.get("/perguntar", (req, res) => {
 });
 
 app.post("/saveask", (req, res) => {
+
   let titulo = req.body.titulo;
   let descricao = req.body.descricao;
-  res.send(`Recebido! Título: ${titulo} e descricação: ${descricao}`);
+
+  askModel.create({
+    titulo: titulo,
+    descricao: descricao
+  }).then(() => {
+    res.redirect("/");
+  });
 });
 
 app.listen(8080, () => {
