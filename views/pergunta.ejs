@@ -9,7 +9,11 @@
         <textarea class="m-auto form-control" placeholder="Digite sua resposta" name="corpo"></textarea>
         <input type="hidden" name="pergunta" value="<%= pergunta.id %>">
         <button class="btn btn-outline-dark btn-sm col-xs-2 mt-3">Responder</button>
-    </form>     
+    </form>
+    <h3>Respostas:</h3>
+    <p><% respostas.forEach(resposta => {%></p>   
+        <div class="card card-body m-auto" style="width: 25rem;"><p><%= resposta.corpo %></p></div>
+    <% }) %>  
     </div>  
 </body>
 <%- include('partials/footer.ejs') %>
