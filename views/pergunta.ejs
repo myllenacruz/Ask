@@ -4,7 +4,12 @@
 
     <div class="container d-auto justify-content-center text-center">
       <h2 class="mt-4 text-center"><%= pergunta.titulo %></h2>
-      <p><%= pergunta.descricao %></p>     
+      <p><%= pergunta.descricao %></p>
+      <form class="form form-group" method="POST" action="/responder">
+        <textarea class="m-auto form-control" placeholder="Digite sua resposta" name="corpo"></textarea>
+        <input type="hidden" name="pergunta" value="<%= pergunta.id %>">
+        <button class="btn btn-outline-dark btn-sm col-xs-2 mt-3">Responder</button>
+    </form>     
     </div>  
 </body>
 <%- include('partials/footer.ejs') %>
