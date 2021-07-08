@@ -33,6 +33,10 @@ a:hover {
   color: #9b95e7 !important;
 }
 
+p {
+  color: #808080;
+}
+
 .navbar-dark {
   background: #2a2935 !important;
 }
