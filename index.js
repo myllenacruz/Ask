@@ -37,7 +37,7 @@ app.post("/saveask", (req, res) => {
 
   let titulo = req.body.titulo;
   let descricao = req.body.descricao;
-  
+
   askModel.create({
     titulo: titulo,
     descricao: descricao
@@ -46,22 +46,6 @@ app.post("/saveask", (req, res) => {
   });
 });
 
-app.get("/pergunta/:id", (req, res) =>{
-  let id = req.params.id;
-  askModel.findOne({
-    where: {id: id}
-  }).then(pergunta => {
-    if(pergunta != undefined) {
-      res.render("pergunta", {
-        pergunta: pergunta
-      });
-    } else {
-      res.redirect("/");
-    }
-  });
-});
-
 app.listen(8080, () => {
   console.log("Rodando!");
 });
-
